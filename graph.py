@@ -11,18 +11,18 @@ dot.node("CISO", "CISO\n[Chief Information Security Officer]", shape="box", styl
 domains = {
     "compliance": "[compliance]",
     "ops": "[security operations]",
-    "blue": "[blue team]",
+    "ops blue team": "[blue team]",
+    "ops red team" : "[red team]", 
     "grc": "[governance, risk & compliance]"
 }
 
 # Heads
 dot.node("HeadSec", "Head of Information Security [sec]", shape="box", fillcolor="#f4cccc", style="filled")
 dot.node("HeadOps", "Head of Security Operations [ops]", shape="box", fillcolor="#f4cccc", style="filled")
-dot.node("HeadBlue", "Head of Blue Team [blue]", shape="box", fillcolor="#f4cccc", style="filled")
 dot.node("HeadGRC", "Head of GRC [grc]", shape="box", fillcolor="#f4cccc", style="filled")
 
 # Connect CISO to Heads
-dot.edges([("CISO", "HeadSec"), ("CISO", "HeadOps"), ("CISO", "HeadBlue"), ("CISO", "HeadGRC")])
+dot.edges([("CISO", "HeadSec"), ("CISO", "HeadOps"), ("CISO", "HeadGRC")])
 
 # Security Engineering Managers
 dot.node("SEMsec", "Security Engineering Manager [sem sec]", shape="box", fillcolor="#d9ead3", style="filled")
